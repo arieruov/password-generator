@@ -135,66 +135,74 @@ function App() {
           <span className="Password-Length-Number">{state.passwordLength}</span>
         </div>
 
-        <div>
-          <input
-            type="checkbox"
-            name="Include Uppercase Letters"
-            id="Uppercase"
-            onChange={(event) =>
-              dispatch({
-                type: "SET_INCLUDE_UPPERCASE",
-                payload: event.target.checked,
-              })
-            }
-          />
-          <label htmlFor="Uppercase">Include Uppercase Letters</label>
-        </div>
-        <div>
-          <input
-            type="checkbox"
-            name="Include Lowercase Letters"
-            id="Lowercase"
-            onChange={(event) =>
-              dispatch({
-                type: "SET_INCLUDE_LOWERCASE",
-                payload: event.target.checked,
-              })
-            }
-          />
-          <label htmlFor="Lowercase">Include Lowercase Letters</label>
-        </div>
-        <div>
-          <input
-            type="checkbox"
-            name="Include Numbers"
-            id="Numbers"
-            onChange={(event) =>
-              dispatch({
-                type: "SET_INCLUDE_NUMBERS",
-                payload: event.target.checked,
-              })
-            }
-          />
-          <label htmlFor="Numbers">Include Numbers</label>
-        </div>
-        <div>
-          <input
-            type="checkbox"
-            name="Include Symbols"
-            id="Symbols"
-            onChange={(event) =>
-              dispatch({
-                type: "SET_INCLUDE_SYMBOLS",
-                payload: event.target.checked,
-              })
-            }
-          />
-          <label htmlFor="Symbols">Include Symbols</label>
+        <div className="Password-Options">
+          <div className="Password-Option">
+            <input
+              className="Password-Option-Checkbox"
+              type="checkbox"
+              name="Include Uppercase Letters"
+              id="Uppercase"
+              onChange={(event) =>
+                dispatch({
+                  type: "SET_INCLUDE_UPPERCASE",
+                  payload: event.target.checked,
+                })
+              }
+            />
+            <label htmlFor="Uppercase">Include Uppercase Letters</label>
+          </div>
+          <div className="Password-Option">
+            <input
+              className="Password-Option-Checkbox"
+              type="checkbox"
+              name="Include Lowercase Letters"
+              id="Lowercase"
+              onChange={(event) =>
+                dispatch({
+                  type: "SET_INCLUDE_LOWERCASE",
+                  payload: event.target.checked,
+                })
+              }
+            />
+            <label htmlFor="Lowercase">Include Lowercase Letters</label>
+          </div>
+          <div className="Password-Option">
+            <input
+              className="Password-Option-Checkbox"
+              type="checkbox"
+              name="Include Numbers"
+              id="Numbers"
+              onChange={(event) =>
+                dispatch({
+                  type: "SET_INCLUDE_NUMBERS",
+                  payload: event.target.checked,
+                })
+              }
+            />
+            <label htmlFor="Numbers">Include Numbers</label>
+          </div>
+          <div className="Password-Option">
+            <input
+              className="Password-Option-Checkbox"
+              type="checkbox"
+              name="Include Symbols"
+              id="Symbols"
+              onChange={(event) =>
+                dispatch({
+                  type: "SET_INCLUDE_SYMBOLS",
+                  payload: event.target.checked,
+                })
+              }
+            />
+            <label htmlFor="Symbols">Include Symbols</label>
+          </div>
         </div>
       </div>
 
       {/*Button generator*/}
-      <button onClick={generatePassword}>Generate Password</button>
+      <button className="Generate-Button" onClick={generatePassword}>
+        Generate Password
+      </button>
     </div>
   );
 }
